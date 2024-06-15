@@ -13,7 +13,7 @@ Tab:AddLabel("City Farm")
 local teleporting = false
 
 Tab:AddButton({
-	Name = "Auto Hoops (Tp)",
+	Name = "Hoop V1",
 	Callback = function()
       		while true do
   local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -22,6 +22,11 @@ for i, v in pairs(workspace.Hoops:GetChildren()) do rootpart.CFrame = v.CFrame w
 end
   	end    
 })
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 
 Tab:AddButton({ Name = "City Red Orb", Callback = function() _G.loop = true while _G.loop do wait() for i = 1, 200 do game:GetService('ReplicatedStorage').rEvents.orbEvent:FireServer("collectOrb", "Red Orb", "City") end end end })
 
